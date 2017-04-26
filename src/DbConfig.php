@@ -11,6 +11,14 @@ class DbConfig implements DbConfigInterface {
     private $password = 'juhara';
     private $tableName = 'queue';
 
+    public function __construct($host, $username, $password, $dbname, $tablename) {
+        $this->dbHost = $host;
+        $this->dbName = $dbname;
+        $this->username = $username;
+        $this->password = $password;
+        $this->tableName = $tablename;
+    }
+
     /**
      * Set host of database (IP or hostname)
      * @param string $host
