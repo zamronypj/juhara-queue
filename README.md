@@ -18,9 +18,7 @@ Add entry to `composer.json`
 
     {
         "require" : {
-            ...
             "Juhara\Queue" : "^0.1"
-            ...
         }
 
     }
