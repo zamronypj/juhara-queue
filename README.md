@@ -28,11 +28,12 @@ Add entry to `composer.json`
 Usage
 -----
 
-`producer.php`
+`producer.php` adds long-running task to background queue.
 
 ```php
 
     <?php
+    namespace App\Producer;
 
     use Juhara\Queue\KeyValueData;
     use Juhara\Queue\Db\MySQLBackedQueue;
@@ -48,11 +49,12 @@ Usage
 
 ```
 
-`consumer.php`
+`consumer.php` script execute endlessly in background and retrieve data from queue if available.
 
 ```php
 
     <?php
+    namespace App\Consumer;
 
     use Juhara\Queue\Db\MySQLBackedQueue;
     use Juhara\Queue\Db\DbConfig;
@@ -61,8 +63,11 @@ Usage
     $queue = new MySQLBackedQueue($dbConfig);
     $queue->initialize();
 
-    while ($data = $queue->pop()) {
-        //do something with queued data
+    while (true) {
+        $data = $queue->pop();
+        if ($data) {
+            //do something with queued data
+        }
     }
 
 ```
