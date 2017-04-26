@@ -38,7 +38,7 @@ Usage
     use Juhara\Queue\Db\MySQLBackedQueue;
     use Juhara\Queue\Db\DbConfig;
 
-    $dbConfig = new DbConfig('localhost', 'yourusename', 'youspassword', 'yourdb', 'yourtable');
+    $dbConfig = new DbConfig('localhost', 'yourusename', 'yourpassword', 'yourdb', 'yourtable');
     $queue = new MySQLBackedQueue($dbConfig);
     $queue->initialize();
 
@@ -57,8 +57,9 @@ Usage
     use Juhara\Queue\Db\MySQLBackedQueue;
     use Juhara\Queue\Db\DbConfig;
 
-    $dbConfig = new DbConfig('localhost', 'yourusename', 'youspassword', 'yourdb', 'yourtable');
+    $dbConfig = new DbConfig('localhost', 'yourusename', 'yourpassword', 'yourdb', 'yourtable');
     $queue = new MySQLBackedQueue($dbConfig);
+    $queue->initialize();
 
     while ($data = $queue->pop()) {
         //do something with queued data
