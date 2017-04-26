@@ -16,7 +16,7 @@ class MySQLBackedQueue extends DbBackedQueue {
      * Do something to initialize queue
      */
     public function initialize() {
-        $dbConfig = $this->getConfig()
+        $dbConfig = $this->getConfig();
         $this->db = new mysqli($dbConfig->getHost(),
                                $dbConfig->getUserName(),
                                $dbConfig->getUserPassword(),
