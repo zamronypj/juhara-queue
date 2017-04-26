@@ -10,10 +10,27 @@ Requirement
 Installation
 ------------
 
+Using Composer
+
+Add entry to `composer.json`
+
+```json
+
+    {
+        "require" : {
+            ...
+            "Juhara\Queue" : "^0.1"
+            ...
+        }
+
+    }
+
+```
+
 Usage
 -----
 
-producer.php
+`producer.php`
 
 ```php
 
@@ -33,7 +50,8 @@ producer.php
 
 ```
 
-consumer.php
+`consumer.php`
+
 ```php
 
     <?php
