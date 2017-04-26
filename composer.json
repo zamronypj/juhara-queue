@@ -1,6 +1,6 @@
 {
     "name": "juhara/queue",
-    "description": "Nacho, nacho man. I want to be a nacho man",
+    "description": "Simple queue implementation in PHP",
     "license": "GPL V3",
     "keywords": ["juhara", "queue"],
     "authors": [
