@@ -29,7 +29,7 @@ class MySQLBackedQueue extends DbBackedQueue {
      * for example when detroying queue
      */
     public function finalize() {
-        //do nothing;
+        $this->db->close();
     }
 
     private function generateRandomString($len) {
