@@ -5,6 +5,7 @@ namespace Juhara\Queue\Db;
 use Juhara\Queue\InitializeableInterface;
 use Juhara\Queue\BaseQueue;
 use Juhara\Queue\Db\DbConfigInterface as DbConfig;
+use Juhara\Queue\QueueDataInterface as QueueData;
 
 /**
  * Queue that store its data in a table of MySQL database
